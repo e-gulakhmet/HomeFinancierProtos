@@ -1,0 +1,6 @@
+# Ignore other files that should not be committed
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
