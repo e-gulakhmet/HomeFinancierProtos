@@ -1,0 +1,14 @@
+version: v1
+
+managed:
+  enabled: true
+
+plugins:
+  - plugin: buf.build/protocolbuffers/python # Generates message and enum types. (https://buf.build/protocolbuffers/python)
+    out: gen/python/homefinancier_grpc/
+
+  - plugin: buf.build/protocolbuffers/pyi # Generates stub files for message and enum types. (https://buf.build/protocolbuffers/pyi)
+    out: gen/python/homefinancier_grpc/
+
+  - plugin: buf.build/grpc/python # Generates Generates Python client and server stubs for the gRPC framework. (https://buf.build/grpc/python)
+    out: gen/python/homefinancier_grpc/
