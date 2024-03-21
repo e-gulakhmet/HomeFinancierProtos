@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package homefinancier.storages.v1;
+
+
+service StoragesService {
+  rpc CreateStorage (CreateStorageRequest) returns (CreateStorageResponse) {}
+
+  rpc GetStorage (GetStorageRequest) returns (GetStorageResponse) {}
+}
+
+
+message CreateStorageRequest {
+  string link = 1;
+  string expenses_table_link = 2;
+  string incomes_table_link = 3;
+}
+
+message CreateStorageResponse {
+  string storage_id = 1;
+}
+
+
+message GetStorageRequest {
+  string storage_id = 1;
+}
+
+message GetStorageResponse {
+  string link = 1;
+  string expenses_table_link = 2;
+  string incomes_table_link = 3;
+}
